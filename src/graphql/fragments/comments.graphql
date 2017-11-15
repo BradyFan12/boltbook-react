@@ -1,0 +1,7 @@
+fragment UserInfoComment on Comment {
+  user {
+    firstName
+    lastName
+    username
+  }
+}

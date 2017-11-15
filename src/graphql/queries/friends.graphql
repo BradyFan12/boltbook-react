@@ -1,0 +1,11 @@
+query User($username: String!) {
+  User(username: $username) {
+    friends {
+      id
+      firstName
+      lastName
+      username
+      avatar
+    }
+  }
+}

@@ -1,0 +1,14 @@
+#import "../fragments/users.graphql"
+#import "../fragments/posts.graphql"
+
+query User($username: String!) {
+  User(username: $username) {
+    ...UserProfile
+    posts(orderBy: createdAt_DESC) {
+      id
+      createdAt
+      body
+      ...PostComments
+    }
+  }
+}

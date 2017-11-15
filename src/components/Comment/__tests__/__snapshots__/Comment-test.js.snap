@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render as expected 1`] = `
+<div
+  className="comment"
+>
+  <div
+    className="avatar"
+  >
+    <img
+      alt=""
+      src=""
+    />
+  </div>
+  <input
+    className="form-control"
+    placeholder="Write a comment..."
+    type="text"
+  />
+</div>
+`;

@@ -1,0 +1,12 @@
+fragment UserProfile on User {
+  firstName
+  lastName
+  username
+  avatar
+  coverImage
+  relationshipStatus
+  bio
+  featuredImages
+  currentCity
+  phoneNumber
+}

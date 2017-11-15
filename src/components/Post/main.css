@@ -1,0 +1,43 @@
+.avatar img {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+}
+
+.avatar span {
+  padding: 5px;
+}
+
+.post {
+  box-sizing: border-box;
+  box-shadow: 0 0 30px 0 #eee;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.interactions {
+  list-style: none;
+}
+
+.interactions ul li {
+  display: inline-block;
+}
+
+.interactions li {
+  margin-right: 25px;
+  cursor: pointer;
+  color: steelblue;
+}
+
+.content {
+  text-align: justify;
+  font-size: 17px;
+  padding: 15px 0;
+}
+
+
+/* .metadata {
+
+} */

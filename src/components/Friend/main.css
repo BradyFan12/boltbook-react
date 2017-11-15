@@ -1,0 +1,16 @@
+.friend {
+  border: 1px solid #eee;
+  margin: 25px 0;
+}
+
+.friend img {
+  height: 150px;
+}
+
+.friend .details {
+  padding: 15px;
+}
+
+.friend div {
+  display: inline;
+}

@@ -1,0 +1,16 @@
+.profile-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: #FAFAFA;
+  padding: 15px;
+}
+
+.profile-avatar {
+  height: 200px;
+  width: auto;
+  margin-top: -190px;
+  margin-left: -70px;
+  position: relative;
+}

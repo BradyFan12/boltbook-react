@@ -1,0 +1,15 @@
+#import "../fragments/posts.graphql"
+
+query allPosts {
+  allPosts(orderBy: updatedAt_DESC) {
+    id
+    createdAt
+    body
+    user {
+      avatar
+      firstName
+      lastName
+    }
+    ...PostComments
+  }
+}

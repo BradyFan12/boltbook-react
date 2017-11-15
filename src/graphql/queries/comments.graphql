@@ -1,0 +1,9 @@
+#import "../fragments/comments.graphql"
+
+query allComments {
+  allComments {
+    id
+    body
+    ...UserInfoComment
+  }
+}
