@@ -4,3 +4,13 @@ fragment PostComments on Post {
     body
   }
 }
+
+fragment UserPostInfo on Post {
+  user {
+    id
+    avatar
+    firstName
+    lastName
+    username
+  }
+}

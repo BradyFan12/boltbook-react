@@ -1,5 +1,5 @@
-#import "../fragments/users.graphql"
 #import "../fragments/posts.graphql"
+#import "../fragments/users.graphql"
 
 query User($username: String!) {
   User(username: $username) {
@@ -8,6 +8,7 @@ query User($username: String!) {
       id
       createdAt
       body
+      ...UserPostInfo
       ...PostComments
     }
   }

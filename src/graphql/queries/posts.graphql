@@ -5,11 +5,6 @@ query allPosts {
     id
     createdAt
     body
-    user {
-      avatar
-      firstName
-      lastName
-    }
     ...PostComments
   }
 }

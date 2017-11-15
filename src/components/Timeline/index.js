@@ -3,6 +3,7 @@ import { Post } from 'components/Post';
 import { NewPost } from 'components/NewPost';
 
 export const Timeline = ({ user }) => {
+  console.log(user);
   return (
     <div>
       <NewPost />
