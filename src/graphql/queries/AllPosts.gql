@@ -1,4 +1,5 @@
-#import "../fragments/posts.graphql"
+#import "../fragments/UserPostInfo.gql"
+#import "../fragments/PostComments.gql"
 
 query allPosts {
   allPosts(orderBy: updatedAt_DESC) {

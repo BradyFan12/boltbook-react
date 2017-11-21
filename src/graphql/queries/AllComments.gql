@@ -1,4 +1,4 @@
-#import "../fragments/comments.graphql"
+#import "../fragments/UserInfoComment.gql"
 
 query allComments {
   allComments {

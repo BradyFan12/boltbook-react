@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Comment } from 'components/Comment';
-import CommentListQuery from 'graphql/queries/comments.graphql';
+import CommentListQuery from 'graphql/queries/AllComments.gql';
 
 class CommentList extends Component {
   render() {

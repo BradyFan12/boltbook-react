@@ -1,0 +1,6 @@
+fragment PostComments on Post {
+  comments {
+    id
+    body
+  }
+}

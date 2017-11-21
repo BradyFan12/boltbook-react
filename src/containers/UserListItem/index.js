@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { ProfileHeader } from 'components/ProfileHeader';
 import { TimelineRoot } from 'components/TimelineRoot';
-import UserListItemQuery from 'graphql/queries/users.graphql';
+import UserListItemQuery from 'graphql/queries/OneUser.gql';
 
 class UserListItem extends Component {
   render() {
@@ -15,7 +15,7 @@ class UserListItem extends Component {
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-lg-10 col-offset-lg-1'>
+          <div className='col-lg-10 offset-lg-1'>
             <ProfileHeader user={user} />
             <TimelineRoot user={user} />
           </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Friend } from 'components/Friend';
-import FriendListQuery from 'graphql/queries/friends.graphql';
+import FriendListQuery from 'graphql/queries/UserFriends.gql';
 
 class FriendList extends Component {
   render() {

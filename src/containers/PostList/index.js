@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Post } from 'components/Post';
-import PostListQuery from 'graphql/queries/posts.graphql';
+import PostListQuery from 'graphql/queries/AllPosts.gql';
 
 class PostList extends Component {
   render() {

@@ -1,5 +1,7 @@
-#import "../fragments/posts.graphql"
-#import "../fragments/users.graphql"
+#import "../fragments/PostComments.gql"
+#import "../fragments/UserProfile.gql"
+#import "../fragments/UserPostInfo.gql"
+
 
 query User($username: String!) {
   User(username: $username) {
