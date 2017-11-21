@@ -6,8 +6,8 @@ import { NewsFeed } from 'components/NewsFeed';
 import { NotFound } from 'components/NotFound';
 
 import { UserItem } from 'containers/UserListItem';
-// import { AccountAbout } from 'containers/AccountAbout';
 import { FriendItem } from 'containers/FriendList';
+import { FindFriends } from 'containers/FindFriends';
 
 export const App = () => {
   return (
@@ -16,8 +16,8 @@ export const App = () => {
 
       <Switch>
         <Route exact path='/' component={NewsFeed} />
+        <Route exact path='/find-friends' component={FindFriends} />
         <Route exact path='/:username' component={UserItem} />
-        {/* <Route exact path='/:username/about' component={AccountAbout} /> */}
         <Route exact path='/:username/friends' component={FriendItem} />
         <Route component={NotFound} />
       </Switch>
