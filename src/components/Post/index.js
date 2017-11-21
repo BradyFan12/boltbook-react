@@ -2,9 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import './main.css';
-import { CommentBox } from 'components/CommentBox';
+import { Comment } from 'components/Comment';
 
-export const Post = ({ createdAt, body, user }) => {
+export const Post = ({ createdAt, body, user, comments }) => {
+  const postComments = comments.map(({ id, body }) => {
+    return <Comment key={id} body={body} />
+  })
   return (
     <div className='post'>
       <div className='avatar'>
@@ -26,9 +29,7 @@ export const Post = ({ createdAt, body, user }) => {
           <li>Share</li>
         </ul>
       </div>
-      <div>
-        <CommentBox />
-      </div>
+        {postComments}
     </div>
   );
 }

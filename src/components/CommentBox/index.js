@@ -1,12 +1,11 @@
 import React from 'react';
 import { CommentInput } from 'components/CommentInput';
-import { CommentListContainer } from 'containers/CommentList';
+import './main.css';
 
-export const CommentBox = () => {
+export const CommentBox = ({ comments }) => {
   return (
-    <div>
+    <div className='comment-box'>
       <CommentInput />
-      <CommentListContainer />
     </div>
   );
 }

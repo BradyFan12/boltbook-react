@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import { Nav } from 'components/Nav';
-import { Feed } from 'components/Feed';
+import { NewsFeed } from 'components/NewsFeed';
 import { NotFound } from 'components/NotFound';
 
 import { UserItem } from 'containers/UserListItem';
@@ -15,7 +15,7 @@ export const App = () => {
       <Nav />
 
       <Switch>
-        <Route exact path='/' component={Feed} />
+        <Route exact path='/' component={NewsFeed} />
         <Route exact path='/:username' component={UserItem} />
         {/* <Route exact path='/:username/about' component={AccountAbout} /> */}
         <Route exact path='/:username/friends' component={FriendItem} />

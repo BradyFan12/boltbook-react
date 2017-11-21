@@ -1,1 +1,1 @@
-export const GRAPHCOOL_URI = 'https://api.graph.cool/simple/v1/cj9xu60rh0ac50117cwt2mwor';
+export const GRAPHCOOL_URI = 'http://localhost:60000/simple/v1/cja7zkr2r00cr0141ap4hnb55';

@@ -1,9 +1,10 @@
 import React from 'react';
+import './main.css';
 
-export const Comment = ({ comment }) => {
+export const Comment = ({ body }) => {
   return (
     <div className='comment'>
-      {comment.body}
+      {body}
     </div>
   );
 }

@@ -11,7 +11,7 @@ export const NewPost = () => {
           maxWidth: '100%',
           height: '125px'
         }}
-        defaultValue={`What's on your mind?`}
+        placeholder={`What's on your mind?`}
         ></textarea>
     </div>
   );

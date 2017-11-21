@@ -12,12 +12,10 @@ class UserListItem extends Component {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error!</p>;
 
-    console.log(user);
-
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-lg-10 col-lg-offset-1'>
+          <div className='col-lg-10 col-offset-lg-1'>
             <ProfileHeader user={user} />
             <TimelineRoot user={user} />
           </div>

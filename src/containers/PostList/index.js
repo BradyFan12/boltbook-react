@@ -10,16 +10,15 @@ class PostList extends Component {
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error!</p>;
-
-    console.log(posts);
     
-    return posts.map(({ id, createdAt, avatar, body, user }) => {
+    return posts.map(({ id, createdAt, avatar, body, user, comments }) => {
       return <Post
         key={id}
         createdAt={createdAt}
         avatar={avatar}
         body={body}
         user={user}
+        comments={comments}
       />
     });
   }

@@ -5,6 +5,7 @@ query allPosts {
     id
     createdAt
     body
+    ...UserPostInfo
     ...PostComments
   }
 }
