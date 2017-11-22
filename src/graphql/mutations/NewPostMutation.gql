@@ -1,0 +1,15 @@
+mutation createPost(
+  $userId: ID!
+  $body: String!,
+  $images: [String!],
+  $videos: [String!],
+) {
+  createPost(
+    userId: $userId
+    body: $body,
+    images: $images,
+    videos: $videos,
+  ) {
+    id
+  }
+}

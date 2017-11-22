@@ -17,6 +17,10 @@
   margin: 20px 0;
 }
 
+.post-options {
+  float: right;
+}
+
 .interactions {
   list-style: none;
 }

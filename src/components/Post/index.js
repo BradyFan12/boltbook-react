@@ -5,9 +5,10 @@ import './main.css';
 import { Comment } from 'components/Comment';
 
 export const Post = ({ createdAt, body, user, comments }) => {
-  const postComments = comments.map(({ id, body }) => {
-    return <Comment key={id} body={body} />
-  })
+  const displayPostMenu = (e) => {
+    e.preventDefault();
+    console.log(e);
+  }
   return (
     <div className='post'>
       <div className='avatar'>
@@ -16,6 +17,12 @@ export const Post = ({ createdAt, body, user, comments }) => {
           <span>{user.firstName} {user.lastName}</span>
         </Link>
         <span>{ moment(createdAt).format('ddd, hA') }</span>
+        <span className='post-options'>
+          <i
+            className='fa fa-caret-down'
+            onClick={displayPostMenu}
+          />
+        </span>
       </div>
 
       <p className='content'>{body}</p>
@@ -29,7 +36,9 @@ export const Post = ({ createdAt, body, user, comments }) => {
           <li>Share</li>
         </ul>
       </div>
-        {postComments}
+        {comments.map(({ id, body }) => {
+    return <Comment key={id} body={body} />
+  })}
     </div>
   );
 }
