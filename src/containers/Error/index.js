@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Raven from 'raven-js';
+import { ErrorCard } from 'shared/ErrorCard';
 
 const logException = (ex, context) => {
   Raven.captureException(ex, {
@@ -21,7 +22,7 @@ export class Error extends Component {
 
   render() {
     if (this.state.hasError) {
-      return <h1>Something went wrong.</h1>
+      return <ErrorCard />
     }
     return this.props.children
   }

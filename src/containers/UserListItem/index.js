@@ -3,14 +3,16 @@ import { graphql } from 'react-apollo';
 import { ProfileHeader } from 'components/ProfileHeader';
 import { TimelineRoot } from 'components/TimelineRoot';
 import UserListItemQuery from 'graphql/queries/OneUser.gql';
+import { Loading } from 'shared/Loading';
+import { ErrorCard } from 'shared/ErrorCard';
 
 class UserListItem extends Component {
   render() {
     const { loading, error, User } = this.props.data;
     const user = User;
     
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error!</p>;
+    if (loading) return <Loading />
+    if (error) return <ErrorCard />
 
     return (
       <div className='container-fluid'>
