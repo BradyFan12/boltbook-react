@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { graphql, compose } from 'react-apollo';
+import { graphql } from 'react-apollo';
 import { Post } from 'components/Post';
-import DeletePostMutation from 'graphql/mutations/DeletePostMutation.gql';
 import PostListQuery from 'graphql/queries/AllPosts.gql';
 import { Loading } from 'shared/Loading';
 import { ErrorCard } from 'shared/ErrorCard';
@@ -27,7 +26,4 @@ class PostList extends Component {
   }
 }
 
-export const PostListComponent = compose(
-  graphql(PostListQuery, { name: 'postListQuery' }),
-  graphql(DeletePostMutation, { name: 'deletePostMutation' })
-)(PostList);
+export const PostListComponent = graphql(PostListQuery)(PostList);

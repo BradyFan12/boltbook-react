@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "NODE_PATH=src BROWSER=none PORT=8080 node scripts/start.js",
-    "build": "NODE_PATH=src:src/components:src/containers node scripts/build.js",
-    "test": "NODE_PATH=src:src/components:src/containers node scripts/test.js --env=jsdom",
+    "build": "NODE_PATH=src node scripts/build.js",
+    "test": "NODE_PATH=src node scripts/test.js --env=jsdom",
     "deploy": "aws s3 cp build s3://boltbook-react --recursive"
   },
   "dependencies": {
