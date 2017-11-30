@@ -8,6 +8,7 @@ export const ProfileHeader = ({ user }) => {
       <img src={user.coverImage} alt='' width='100%' />
       <div className='profile-nav'>
         <img className='profile-avatar' src={user.avatar} alt='' />
+        <h3 className='profile-name'>{user.firstName} {user.lastName}</h3>
         <Link to={`/${user.username}`}>Timeline</Link>
         <Link to={`/${user.username}/about`}>About</Link>
         <Link to={`/${user.username}/friends`}>Friends</Link>

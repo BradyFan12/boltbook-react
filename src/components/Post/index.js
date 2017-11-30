@@ -1,16 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
-import './main.css';
+import { Card } from 'components/Card';
 import { Comment } from 'components/Comment';
+import { DeletePostProp } from 'containers/DeletePost';
+import './main.css';
 
-export const Post = ({ createdAt, body, user, comments }) => {
+
+export const Post = ({ id, createdAt, body, user, comments }) => {
   const displayPostMenu = (e) => {
     e.preventDefault();
     console.log(e);
   }
   return (
-    <div className='post'>
+    <Card>
       <div className='avatar'>
         <img src={user.avatar} alt={user.username} />
         <Link to={`/${user.username}`}>
@@ -22,6 +25,7 @@ export const Post = ({ createdAt, body, user, comments }) => {
             className='fa fa-caret-down'
             onClick={displayPostMenu}
           />
+          <DeletePostProp id={id} />
         </span>
       </div>
 
@@ -36,9 +40,9 @@ export const Post = ({ createdAt, body, user, comments }) => {
           <li>Share</li>
         </ul>
       </div>
-        {comments.map(({ id, body }) => {
-    return <Comment key={id} body={body} />
-  })}
-    </div>
+        {comments.map(({ id, createdAt, body }) => {
+          return <Comment key={id} createdAt={createdAt} body={body} />
+        })}
+    </Card>
   );
 }

@@ -16,6 +16,7 @@ class PostList extends Component {
     return posts.map(({ id, createdAt, avatar, body, user, comments }) => {
       return <Post
         key={id}
+        id={id}
         createdAt={createdAt}
         avatar={avatar}
         body={body}

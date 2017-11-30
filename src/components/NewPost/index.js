@@ -3,13 +3,10 @@ import { graphql } from 'react-apollo';
 import { Card } from 'components/Card';
 import NewPostMutation from 'graphql/mutations/NewPostMutation.gql';
 
-export class NewPostGql extends Component {
+class NewPostGql extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
     this.submitForm = this.submitForm.bind(this);
   }
 

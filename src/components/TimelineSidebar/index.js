@@ -11,11 +11,10 @@ export const TimelineSidebar = ({ user }) => {
         <p>{user.currentCity}</p>
         <p>{user.relationshipStatus}</p>
         <p>{user.phoneNumber}</p>
-        {user.featuredImages > 1
-          ? user.featuredImages.map((image) => {
-            return <img key={image} src={image} alt='none' className='img-responsive' />
-          })
-          : <p>No featured images yet</p>
+        {
+          user.featuredImages.map((image) => {
+              return <img key={image} src={image} alt='none' className='featured' />
+            })
         }
       </Card>
     </div>

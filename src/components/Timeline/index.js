@@ -10,6 +10,7 @@ export const Timeline = ({ user }) => {
         return (
           <Post
             key={id}
+            id={id}
             createdAt={createdAt}
             body={body}
             user={user}
