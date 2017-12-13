@@ -9,8 +9,8 @@ export const Nav = () => {
         <input type='text' className='form-control' placeholder='Search' />
       </div>
       <div className='links'>
-        <NavLink to='/iamclaytonray'>Clayton</NavLink>
-        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/iamclaytonray'>Clayton</NavLink> {/* Should be ${username} - need props */}
+        <NavLink to='/feed'>Home</NavLink>
         <NavLink to='/find-friends'>Find Friends</NavLink>
         <i className='fa fa-users' aria-hidden='true'></i>
         <i className='fa fa-comment' aria-hidden='true'></i>
