@@ -10,7 +10,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { App } from 'containers/App';
 import { Error } from 'containers/Error';
 
-import { GRAPHCOOL_URI } from './constants';
+import { LOCAL_SIMPLE_API } from './constants';
 
 // styles
 import './styles/normalize.css';
@@ -18,7 +18,7 @@ import './styles/reset.css';
 import './styles/application.css';
 
 const client = new ApolloClient({
-  link: new HttpLink({ uri: GRAPHCOOL_URI }),
+  link: new HttpLink({ uri: LOCAL_SIMPLE_API }),
   cache: new InMemoryCache()
 });
 
