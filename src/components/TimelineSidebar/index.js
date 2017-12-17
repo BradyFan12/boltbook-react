@@ -2,6 +2,14 @@ import React from 'react';
 import { Card } from 'components/Card';
 
 export const TimelineSidebar = ({ user }) => {
+  const featImages = user.featuredImages
+    ?
+      user.featuredImages.map((image) => {
+        return <img key={image} src={image} alt='none' className='featured' />
+      })
+    :
+      `${user.firstName} does not have any featured images yet.`
+
   return (
     <div>
       <Card>
@@ -11,11 +19,7 @@ export const TimelineSidebar = ({ user }) => {
         <p>{user.currentCity}</p>
         <p>{user.relationshipStatus}</p>
         <p>{user.phoneNumber}</p>
-        {
-          user.featuredImages.map((image) => {
-              return <img key={image} src={image} alt='none' className='featured' />
-            })
-        }
+        {featImages}
       </Card>
     </div>
   );
