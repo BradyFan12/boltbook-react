@@ -3,19 +3,19 @@ import { graphql } from 'react-apollo';
 import AuthenticateUser from 'graphql/mutations/auth/AuthenticateUser.gql';
 
 class LoginForm extends Component {
-  constructor(props: any) {
+  constructor(props) {
     super(props);
     this.state = {
-      email: '',
+      username: '',
       password: ''
     };
   }
 
   confirm = async () => {
-    const { email, password } = this.state;
+    const { username, password } = this.state;
     const result = await this.props.mutate({
         variables: {
-          email,
+          username,
           password
         }
       });
@@ -39,10 +39,10 @@ class LoginForm extends Component {
             <h1>Login</h1>
             <div className='form-group'>
               <input
-                value={this.state.email}
-                onChange={(e) => this.setState({ email: e.target.value })}
+                value={this.state.username}
+                onChange={(e) => this.setState({ username: e.target.value })}
                 type='text'
-                placeholder='Email'
+                placeholder='Username'
                 className='form-control'
               />
             </div>

@@ -1,6 +1,6 @@
-mutation AuthenticateUserMutation($email: String!, $password: String!) {
+mutation AuthenticateUserMutation($username: String!, $password: String!) {
   authenticateUser(
-    email: $email,
+    username: $username,
     password: $password
   ) {
     id
