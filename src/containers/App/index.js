@@ -6,11 +6,11 @@ import { NewsFeed } from 'pages/NewsFeed';
 import { NotFound } from 'components/NotFound';
 
 import { Login } from 'containers/Login';
-import { UserItem } from 'containers/UserListItem';
 import { FindFriends } from 'containers/FindFriends';
 
 // Pages
 import { UserFriends } from 'pages/UserFriends';
+import { Profile } from 'pages/Profile';
 
 export const App = () => {
   return (
@@ -21,7 +21,7 @@ export const App = () => {
         <Route exact path='/' component={Login} />
         <Route exact path='/feed' component={NewsFeed} />
         <Route exact path='/find-friends' component={FindFriends} />
-        <Route exact path='/:username' component={UserItem} />
+        <Route exact path='/:username' component={Profile} />
         <Route exact path='/:username/friends' component={UserFriends} />
         <Route component={NotFound} />
       </Switch>
