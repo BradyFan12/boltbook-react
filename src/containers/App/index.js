@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import { Nav } from 'components/Nav';
-import { NewsFeed } from 'components/NewsFeed';
+import { NewsFeed } from 'pages/NewsFeed';
 import { NotFound } from 'components/NotFound';
 
 import { Login } from 'containers/Login';
