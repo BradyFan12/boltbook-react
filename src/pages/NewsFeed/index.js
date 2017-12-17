@@ -5,7 +5,6 @@ import { ErrorCard } from 'shared/ErrorCard';
 import { Post } from 'components/Post';
 import { FeedSidebar } from 'components/FeedSidebar';
 
-
 export class NewsFeed extends React.Component {
   render() {
     return (

@@ -7,8 +7,10 @@ import { NotFound } from 'components/NotFound';
 
 import { Login } from 'containers/Login';
 import { UserItem } from 'containers/UserListItem';
-import { FriendItem } from 'containers/FriendList';
 import { FindFriends } from 'containers/FindFriends';
+
+// Pages
+import { UserFriends } from 'pages/UserFriends';
 
 export const App = () => {
   return (
@@ -20,7 +22,7 @@ export const App = () => {
         <Route exact path='/feed' component={NewsFeed} />
         <Route exact path='/find-friends' component={FindFriends} />
         <Route exact path='/:username' component={UserItem} />
-        <Route exact path='/:username/friends' component={FriendItem} />
+        <Route exact path='/:username/friends' component={UserFriends} />
         <Route component={NotFound} />
       </Switch>
 

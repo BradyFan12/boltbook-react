@@ -1,30 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { graphql } from 'react-apollo';
-import { Friend } from 'components/Friend';
 import FriendListQuery from 'graphql/queries/UserFriends.gql';
-import { Loading } from 'shared/Loading';
-import { ErrorCard } from 'shared/ErrorCard';
 
-class FriendList extends Component {
+
+class FriendListContainer extends React.Component {
   render() {
-    const { data: { loading, error, User } } = this.props;
+    const { loading, error, User } = this.props.data;
     const user = User;
-
-    if (loading) return <Loading />
-    if (error) return <ErrorCard />
       
-    return user.friends.map((friend) => {
-      return <Friend key={friend.id} friend={friend} />
-    });
+    return this.props.render(loading, error, user);
   }
 }
 
 
 
-export const FriendItem = graphql(FriendListQuery, {
+export const FriendList = graphql(FriendListQuery, {
   options: (props) => ({
     variables: {
-      username: props.match.params.username,
+      username: props.username,
     },
   }),
-})(FriendList);
+})(FriendListContainer);
