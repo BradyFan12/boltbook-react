@@ -1,21 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { graphql } from 'react-apollo';
-import { Comment } from 'components/Comment';
 import CommentListQuery from 'graphql/queries/AllComments.gql';
-import { Loading } from 'shared/Loading';
-import { ErrorCard } from 'shared/ErrorCard';
 
-class CommentList extends Component {
+class CommentList extends React.Component {
   render() {
     const { loading, error, allComments } = this.props.data;
     const comments = allComments;
-
-    if (loading) return <Loading />
-    if (error) return <ErrorCard />
       
-    return comments.map((comment) => {
-      return <Comment key={comment.id} comment={comment} />
-    });
+    return this.props.render(loading, error, comments);
   }
 }
 
