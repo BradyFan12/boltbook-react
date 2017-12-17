@@ -1,0 +1,9 @@
+query LoggedInUser {
+  loggedInUser {
+    id
+    firstName
+    lastName
+    username
+    avatar
+  }
+}
