@@ -13,6 +13,15 @@ export const Nav = () => {
       </div>
       <CurrentUser
         render={(loading, error, loggedInUser) => {
+
+          if (!loggedInUser || loggedInUser === null) {
+            return (
+              <div className='links'>
+                <NavLink exact activeClassName='active' to='/'>Login</NavLink>
+                <NavLink exact activeClassName='active' to='/register'>Register</NavLink>
+              </div>
+            );
+          }
           
           if (loading) { return <Loading />; }
           if (error) { return <ErrorCard />; }
