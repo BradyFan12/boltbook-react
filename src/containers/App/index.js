@@ -15,7 +15,7 @@ import { Profile } from 'pages/Profile';
 export const App = () => {
   return (
     <div>
-      <Nav /> {/* Needs to be extracted so we can grab required props */}
+      <Nav />
 
       <Switch>
         <Route exact path='/' component={Login} />
