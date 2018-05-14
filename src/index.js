@@ -22,11 +22,11 @@ import './styles/application.css';
 //   cache: new InMemoryCache()
 // });
 
-const httpLink: ApolloLink = createHttpLink({
+const httpLink = createHttpLink({
   uri: LOCAL_SIMPLE_API,
 });
 
-let cache: ApolloCache = new InMemoryCache();
+let cache = new InMemoryCache();
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('token');
@@ -34,7 +34,7 @@ const authLink = setContext((_, { headers }) => {
     headers: {
       ...headers,
       Authorization: token ? `Bearer ${token}` : null,
-    }
+    },
   };
 });
 
@@ -42,7 +42,6 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: cache,
 });
-
 
 render(
   <ApolloProvider client={client}>
@@ -52,7 +51,7 @@ render(
       </Error>
     </BrowserRouter>
   </ApolloProvider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 registerServiceWorker();
